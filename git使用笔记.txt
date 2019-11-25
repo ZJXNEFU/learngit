@@ -30,7 +30,7 @@ git reflog(查看所有操作日志)
 
 丢弃修改
 git checkout -- readme.txt
-
+    
 
 创建分支，切换到分支
 $ git branch dev
