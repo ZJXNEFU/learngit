@@ -1,0 +1,40 @@
+若执行ssh-add /path/to/xxx.pem是出现这个错误:Could not open a connection to your authentication agent，则先执行如下命令即可：
+
+$ ssh-agent bash
+
+一台电脑多个ssh对应多个远程仓库
+https://blog.csdn.net/xuwenneng/article/details/88840825
+https://www.jianshu.com/p/04e9a885c5c8
+
+本地建仓库
+git init
+
+链接远程仓库
+git remote add origin git@github.com:ZJXNEFU/learngit.git
+
+指定邮箱和用户名（现在不是全局）
+git config user.email "xxxx@xx.com"
+git config user.name "xxxx"
+
+本地跟远程仓库没有对应时，先拉下来（merge），再推
+git pull origin master --allow-unrelated-histories
+
+git push origin master:master
+
+版本回退
+git log(查看日志)
+git reset --hard HEAD^
+git reset --hard 1094a
+
+git reflog(查看所有操作日志)
+
+丢弃修改
+git checkout -- readme.txt
+
+
+创建分支，切换到分支
+$ git branch dev
+$ git checkout dev
+
+合并分支(在master下)
+$ git merge dev
